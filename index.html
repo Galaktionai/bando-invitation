@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <title>BANDO</title>
+    </head>
+  <body>
+    <div class="bando">
+      <span class="name" id="name"></span>
+    </div>
+  </body>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let tg = window.Telegram.WebApp;
+      let name = document.querySelector('#name');
+
+      name.innerHTML = tg.initDataUnsafe.username
+    });
+  </script>
+</html>
